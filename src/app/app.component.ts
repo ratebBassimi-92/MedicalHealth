@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'medical-health';
   myRequest:number=5;
+  outPutMasseageContent:string="";
+
+  constructor(private toastr: ToastrService) {}
+  outPutMasseage()
+  {
+    debugger;
+    
+    this.toastr.success("done", 'Toastr fun!');
+  }
 }
