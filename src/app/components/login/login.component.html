@@ -1,11 +1,4 @@
 <p>login works!</p>
-<p>{{itemTitle}}</p>
-<input type="number" [(ngModel)]="numberDays"/>
-<div [ngSwitch]="numberDays">
-    <p *ngSwitchCase="0">ODD </p>
-    <p *ngSwitchCase="1">Even</p>
-</div>
+<h1>{{messageparent}}</h1>
+<input type="button" (click)="sendEventEmiiter.emit('this from rateb')">
 
-<div>
-    <input type="button" (click)="SendMessage()" />
-</div>

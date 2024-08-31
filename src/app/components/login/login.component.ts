@@ -9,7 +9,11 @@ export class LoginComponent implements OnInit,OnChanges  {
   numberDays:number=2;
 
   @Input() itemTitle: string="";
-  @Output() sendEventEmiiter= new EventEmitter();
+  @Input() messageParent:any;
+  messageparent!:string;
+  @Output() outDateAge = new EventEmitter();
+  
+  @Output() sendEventEmiiter= new EventEmitter<string>();
   ngOnChanges(changes: SimpleChanges): void {
     debugger;
     if (changes['numberDays']) {
